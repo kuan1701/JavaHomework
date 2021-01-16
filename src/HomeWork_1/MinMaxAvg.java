@@ -30,24 +30,29 @@ public class MinMaxAvg {
 		
 		//Checking the entered value
 		if (userNum != null && !userNum.equals("")) {
+			
 			try {
 				testUserNum = Double.parseDouble(userNum);
 				
 				// Finding the minimum value
 				if (randNum1 < randNum2 && randNum1 < testUserNum) {
 					System.out.println("The minimum number is " + dfNum.format(randNum1));
-				} else if (randNum2 < randNum1 && randNum2 < testUserNum) {
+				}
+				else if (randNum2 < randNum1 && randNum2 < testUserNum) {
 					System.out.println("The minimum number is " + dfNum.format(randNum2));
-				} else {
+				}
+				else {
 					System.out.println("The minimum number is " + testUserNum);
 				}
 				
 				// Finding the maximum value
 				if (randNum1 > randNum2 && randNum1 > testUserNum) {
 					System.out.println("The maximum number is " + dfNum.format(randNum1));
-				} else if (randNum2 > randNum1 && randNum2 > testUserNum) {
+				}
+				else if (randNum2 > randNum1 && randNum2 > testUserNum) {
 					System.out.println("The maximum number is " + dfNum.format(randNum2));
-				} else {
+				}
+				else {
 					System.out.println("The maximum number is " + testUserNum);
 				}
 				
@@ -55,10 +60,12 @@ public class MinMaxAvg {
 				double avgValue = (randNum1 + randNum2 + Double.parseDouble(userNum)) / 3;
 				System.out.println("The arithmetic mean of three given numbers is " + dfNum.format(avgValue));
 				
-			} catch (Exception e) {
+			}
+			catch (Exception e) {
 				System.out.println("You entered a non-numeric value!");
 			}
 		}
+		
 		if (userNum == null || userNum.equals("")) {
 			System.out.println("You haven't entered anything");
 		}

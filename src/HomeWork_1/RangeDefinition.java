@@ -25,22 +25,28 @@ public class RangeDefinition {
 		
 		//Checking the entered value
 		if (userNum != null && !userNum.equals("")) {
+			
 			try {
 				testUserNum = Double.parseDouble(userNum);
 				
 				if (testUserNum >= 0 && testUserNum <= firstRndNum) {
 					System.out.println("User entered number is in the range from 0 to " + firstRndNum + "!");
-				} else if (testUserNum > firstRndNum && testUserNum <= secondRndNum) {
+				}
+				else if (testUserNum > firstRndNum && testUserNum <= secondRndNum) {
 					System.out.println("User entered number is in the range from " + firstRndNum + " to " + secondRndNum + "!");
-				} else if (testUserNum > secondRndNum) {
+				}
+				else if (testUserNum > secondRndNum) {
 					System.out.println("User entered number is in the range of " + secondRndNum + " and above!");
-				} else {
+				}
+				else {
 					System.out.println("User entered number less then zero!");
 				}
-			} catch (Exception e) {
+			}
+			catch (Exception e) {
 				System.out.println("You entered a non-numeric value!");
 			}
 		}
+		
 		if (userNum == null || userNum.equals("")) {
 			System.out.println("You haven't entered anything");
 		}

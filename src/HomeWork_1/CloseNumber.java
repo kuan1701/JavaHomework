@@ -33,18 +33,23 @@ public class CloseNumber {
 		
 		//Checking the entered value
 		if (userNum != null && !userNum.equals("")) {
+			
 			try {
 				testUserNum = Double.parseDouble(userNum);
 				
 				if (testUserNum > firstNumRange && testUserNum < secondNumRange) {
 					System.out.println("The number entered by the user is close in value to the specified number");
-				} else {
+				}
+				else {
 					System.out.println("The number entered by the user is not close in value to the specified number");
 				}
-			} catch (Exception e) {
+			}
+			
+			catch (Exception e) {
 				System.out.println("You entered a non-numeric value!");
 			}
 		}
+		
 		if (userNum == null || userNum.equals("")) {
 			System.out.println("You haven't entered anything");
 		}

@@ -19,6 +19,7 @@ public class DayOfWeek {
 		
 		//Checking the entered value
 		if (numOfWeek != null && !numOfWeek.equals("")) {
+			
 			try {
 				testNumOfWeek = Integer.parseInt(numOfWeek);
 				
@@ -54,10 +55,12 @@ public class DayOfWeek {
 					default:
 						System.out.println("There is no such day of the week!");
 				}
-			} catch (Exception e) {
+			}
+			catch (Exception e) {
 				System.out.println("You entered a non-numeric value!");
 			}
 		}
+		
 		if (numOfWeek == null || numOfWeek.equals("")) {
 			System.out.println("You haven't entered anything");
 		}
