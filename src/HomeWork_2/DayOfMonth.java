@@ -26,7 +26,7 @@ public class DayOfMonth {
 		int monthNumber;
 		int dayOfTheMonth;
 		
-		int[] months = new int[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		
 		// Loop for the user to enter the desired number
 		do {
