@@ -11,7 +11,7 @@
  * @version 15.0.1
  */
 
-package HomeWork_2;
+package Homework_2;
 
 import java.util.Random;
 import java.util.Scanner;
