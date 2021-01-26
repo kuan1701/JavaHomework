@@ -7,7 +7,7 @@
  * @version 15.0.1
  */
 
-package src.hw01;
+package Homework_1;
 
 import javax.swing.*;
 import java.text.DecimalFormat;
