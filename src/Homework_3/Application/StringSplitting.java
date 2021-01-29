@@ -1,9 +1,8 @@
 /**
- *
  * StringSplitting implements an application that splits text into separate words and,
  * at the user's choice, counts the number and outputs to the console the selected word
  * entered by the user or outputs all words separately and counts their number.
- *
+ * <p>
  * The user is given a choice, by pressing 1, the user enters the word that needs to be
  * counted, and the program prints to the console how many times the word entered by the
  * user occurs in the text. When you press 2, the program displays all the words in the
@@ -80,8 +79,14 @@ public class StringSplitting {
 						}
 					}
 					//Displays the duplicate word if count is greater than 1
-					if (count >= 1 && !words[i].equals("0"))
-						System.out.println(words[i] + " - " + count);
+					String result = "The word \"" + words[i] + "\" is repeated " + count;
+					
+					if (count > 1 && !words[i].equals("0")) {
+						System.out.println(result + " times.");
+					}
+					else if (count == 1 && !words[i].equals("0")) {
+						System.out.println(result + " time.");
+					}
 				}
 				break;
 			
