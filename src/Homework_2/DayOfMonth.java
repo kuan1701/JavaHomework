@@ -26,7 +26,22 @@ public class DayOfMonth {
 		int monthNumber;
 		int dayOfTheMonth;
 		
-		int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		int[] dayInAMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		
+		String[] months = {
+				"January",
+				"February",
+				"March",
+				"April",
+				"May",
+				"June",
+				"July",
+				"August",
+				"September",
+				"October",
+				"November",
+				"December"
+		};
 		
 		// Loop for the user to enter the desired number
 		do {
@@ -35,64 +50,16 @@ public class DayOfMonth {
 		} while (monthNumber > 12 || monthNumber <= 0);
 		
 		// Determine which month the user entered
-		switch (monthNumber) {
-			case (1):
-				System.out.println("Your month is January!");
-				break;
-			
-			case (2):
-				System.out.println("Your month is February!");
-				break;
-				
-			case (3):
-				System.out.println("Your month is March!");
-				break;
-				
-			case (4):
-				System.out.println("Your month is April!");
-				break;
-				
-			case (5):
-				System.out.println("Your month is May!");
-				break;
-				
-			case (6):
-				System.out.println("Your month is June!");
-				break;
-				
-			case (7):
-				System.out.println("Your month is July!");
-				break;
-			case (8):
-				System.out.println("Your month is August!");
-				break;
-				
-			case (9):
-				System.out.println("Your month is September!");
-				break;
-				
-			case (10):
-				System.out.println("Your month is October!");
-				break;
-				
-			case (11):
-				System.out.println("Your month is November!");
-				break;
-				
-			case (12):
-				System.out.println("Your month is Decembery!");
-				break;
-				
-			default:
-				System.out.println("There is no such month!");
-		}
+		String month = ((monthNumber - 1) <= months.length) ?
+				"Your month is " +  months[(monthNumber - 1)] + "." : "There is no such month!";
+		System.out.println(month);
 		
 		// Entering the day of the month
 		System.out.println("Please enter day of the month!");
 		dayOfTheMonth = num.nextInt();
 		
 		// Displaying a message
-		String msg = (dayOfTheMonth <= months[monthNumber - 1] && dayOfTheMonth > 0) ? "This number is in the month!" : "There is no such date in the month!";
+		String msg = (dayOfTheMonth <= dayInAMonth[monthNumber - 1] && dayOfTheMonth > 0) ? "This number is in the month!" : "There is no such date in the month!";
 		System.out.println(msg);
 		
 		num.close();
